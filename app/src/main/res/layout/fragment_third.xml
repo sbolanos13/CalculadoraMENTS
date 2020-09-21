@@ -24,8 +24,10 @@
         android:text="@string/hello_blank_fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/botonhome2"
@@ -45,126 +47,139 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="90dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textefectividad" />
 
     <Spinner
         android:id="@+id/spinnerimpacto6"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="438dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textimpacto6" />
 
     <Spinner
         android:id="@+id/spinnerdificultad2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="353dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textdificultadretraso2" />
 
     <Spinner
         android:id="@+id/spinnerimpacto2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="266dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textimpacto2" />
 
     <Spinner
         android:id="@+id/spinnerriesgo"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="176dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textriesgo" />
 
     <TextView
         android:id="@+id/textdificultadretraso6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Dificultad/Riesgo intervención por Retraso (6 semanas)"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="475dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerimpacto6" />
 
     <TextView
         android:id="@+id/textimpacto6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Enfermedad por Retraso (6 semanas)"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="385dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerdificultad2" />
 
     <TextView
         android:id="@+id/textdificultadretraso2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Dificultad/Riesgo intervención por Retraso (2 semanas)  "
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="299dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerimpacto2" />
 
     <TextView
         android:id="@+id/textimpacto2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Enfermedad por Retraso (2 semanas) "
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="208dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerriesgo" />
 
     <TextView
         android:id="@+id/textriesgo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Opción Tratamiento NO Operatorio (Riesgo Exposición)"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="121dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerefectividad" />
 
     <Button
         android:id="@+id/botonsig2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="16dp"
         android:text="SIGUIENTE"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonprevious"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttonprevious" />
 
     <Button
         android:id="@+id/botonprevious2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
+        android:layout_marginBottom="16dp"
         android:text="ANTERIOR"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/botonsig2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textlatabla2"
@@ -186,23 +201,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Efectividad Tratamiento NO Operatorio"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="54dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textlatabla2" />
 
     <Spinner
         android:id="@+id/spinnerdificultad6"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textdificultadretraso6" />
 
     <TextView
         android:id="@+id/textresparcial2"
