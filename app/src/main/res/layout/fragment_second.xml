@@ -37,11 +37,12 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="23dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="175dp" />
+        app:layout_constraintTop_toBottomOf="@+id/texttestadia" />
 
     <TextView
         android:id="@+id/textmiembros"
@@ -62,50 +63,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="17dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Necesidad UCI Postoperatoria"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbarUCI"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="293dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textsangre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Pérdida de Sangre Anticipada"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="218dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnertestadia" />
 
     <TextView
         android:id="@+id/texttestadia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Tiempo Estimado de Estadía"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="136dp" />
+        app:layout_constraintTop_toBottomOf="@+id/texttoperacion" />
 
     <Button
         android:id="@+id/botonsig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
+        android:layout_marginBottom="16dp"
         android:text="SIGUIENTE"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonprevious"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttonprevious" />
 
     <TextView
         android:id="@+id/textview_second"
@@ -121,9 +126,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
+        android:layout_marginBottom="16dp"
         android:text="ANTERIOR"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textlatabla1"
@@ -158,19 +164,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Tiempo de Operación"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="62dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textlatabla1" />
 
     <SeekBar
         android:id="@+id/seekbartoperacion"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:max="10"
         android:progress="3"
         app:layout_constraintBottom_toTopOf="@+id/seekbarsangre"
@@ -178,7 +186,7 @@
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texttoperacion"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <SeekBar
         android:id="@+id/seekbarsangre"
@@ -198,49 +206,54 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="18dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="543dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textzona" />
 
     <SeekBar
         android:id="@+id/seekbarmiembros"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
         android:max="10"
         android:progress="3"
-        app:layout_constraintBottom_toBottomOf="@+id/textprobintub"
+        app:layout_constraintBottom_toTopOf="@+id/textprobintub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekbarUCI"
-        app:layout_constraintVertical_bias="0.575"
-        tools:layout_editor_absoluteX="84dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textprobintub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="44dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Probabilidad Intubación"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textzona"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="436dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textzona"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Zona a Intervenir"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textmiembros" />
 
     <TextView
         android:id="@+id/textresparcial"

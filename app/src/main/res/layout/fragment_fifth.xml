@@ -31,12 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/top"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textresultadofinal"
-            app:layout_constraintVertical_bias="1.0" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="573dp" />
 
         <TextView
             android:id="@+id/textresultadofinal"
@@ -57,12 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/top"
-            app:layout_constraintBottom_toTopOf="@+id/textresultadofinal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-9dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
