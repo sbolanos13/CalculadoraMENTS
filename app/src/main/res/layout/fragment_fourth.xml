@@ -17,8 +17,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -100,10 +99,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.004"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textcovid" />
+            app:layout_constraintTop_toBottomOf="@+id/textcovid"
+            app:layout_constraintVertical_bias="0.007" />
 
         <ImageButton
             android:id="@+id/botonhome3"
@@ -193,14 +194,14 @@
             android:id="@+id/textenfpulmonar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Enfermedades Pulmonares"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.027"
+            app:layout_constraintHorizontal_bias="0.033"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/seekbaredad" />
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
         <TextView
             android:id="@+id/textapneasueno"
@@ -272,16 +273,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textenfpulmonar" />
 
-        <SeekBar
-            android:id="@+id/seekbaredad"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="249dp"
+            android:layout_height="24dp"
             android:layout_marginTop="12dp"
-            android:max="10"
-            android:progress="3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintHorizontal_bias="0.037"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textedad" />
 
