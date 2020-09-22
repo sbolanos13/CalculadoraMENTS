@@ -7,7 +7,7 @@
     tools:context=".SecondFragment">
 
     <Spinner
-        android:id="@+id/spinnertestadia6"
+        android:id="@+id/spinnersangre"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.736" />
 
     <Spinner
-        android:id="@+id/spinnertestadia5"
+        android:id="@+id/spinnerintubacion"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
@@ -27,11 +27,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnertestadia3"
+        app:layout_constraintTop_toBottomOf="@+id/spinnermiembros"
         app:layout_constraintVertical_bias="0.62" />
 
     <Spinner
-        android:id="@+id/spinnertestadia4"
+        android:id="@+id/spinneruci"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textUCI" />
 
     <Spinner
-        android:id="@+id/spinnertestadia3"
+        android:id="@+id/spinnermiembros"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.059" />
 
     <Spinner
-        android:id="@+id/spinnertestadia2"
+        android:id="@+id/spinnertoperacion"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
@@ -68,7 +68,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/spinnertestadia6"
+        app:layout_constraintBottom_toTopOf="@+id/spinnersangre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +113,7 @@
         android:fontFamily="@font/fredoka_one"
         android:text="Pérdida de Sangre Anticipada"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinnertestadia6"
+        app:layout_constraintBottom_toTopOf="@+id/spinnersangre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
