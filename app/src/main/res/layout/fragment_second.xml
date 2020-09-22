@@ -223,9 +223,10 @@
         android:progress="3"
         app:layout_constraintBottom_toTopOf="@+id/textprobintub"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekbarUCI"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.867" />
 
     <TextView
         android:id="@+id/textprobintub"
