@@ -2,7 +2,9 @@ package com.example.avanceapp;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,10 +57,53 @@ public class ThirdFragment extends Fragment {
         }
     }
 
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        // Inflate the layout for this fragment
+//        return inflater.inflate(R.layout.fragment_third, container, false);
+//
+//        view.findViewById(R.id.buttonprevious).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SecondFragmentDirections.ActionSecondFragmentToFirstFragment actionSecondToFirst = SecondFragmentDirections.actionSecondFragmentToFirstFragment();
+//                NavHostFragment.findNavController(SecondFragment.this)
+//                        .navigate(actionSecondToFirst);
+//            }
+//        });
+//
+//        view.findViewById(R.id.botonsig).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment();
+//                NavHostFragment.findNavController(SecondFragment.this)
+//                        .navigate(actionSecondToThird);
+//            }
+//        });
+//
+//
+//    }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third, container, false);
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        view.findViewById(R.id.botonprevious2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ThirdFragmentDirections.ActionThirdFragmentToSecondFragment actionThirdToSecond = ThirdFragmentDirections.actionThirdFragmentToSecondFragment();
+                NavHostFragment.findNavController(ThirdFragment.this)
+                        .navigate(actionThirdToSecond);
+            }
+        });
+
+        view.findViewById(R.id.botonsig2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ThirdFragmentDirections.ActionThirdFragmentToFourthFragment actionThirdToFourth = ThirdFragmentDirections.actionThirdFragmentToFourthFragment();
+                NavHostFragment.findNavController(ThirdFragment.this)
+                        .navigate(actionThirdToFourth);
+            }
+        });
     }
 }
