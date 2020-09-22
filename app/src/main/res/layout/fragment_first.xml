@@ -6,135 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="CheckBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
-        app:layout_constraintStart_toStartOf="@+id/texttabla3"
-        app:layout_constraintTop_toBottomOf="@+id/imagetabla2" />
-
-    <ImageButton
-        android:id="@+id/imagetabla3"
-        android:layout_width="153dp"
-        android:layout_height="157dp"
-        android:layout_marginBottom="12dp"
-        android:src="@android:mipmap/sym_def_app_icon"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imagetabla2"
-        android:layout_width="149dp"
-        android:layout_height="157dp"
-        android:layout_marginTop="216dp"
-        android:layout_marginEnd="4dp"
-        android:src="@android:mipmap/sym_def_app_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.856"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imagesuperior" />
-
     <Button
         android:id="@+id/botonresultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_width="221dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="84dp"
         android:backgroundTint="#03A9F4"
         android:fontFamily="@font/fredoka_one"
         android:text="Comenzar"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageinferior"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.864"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagesuperior"
+        app:layout_constraintVertical_bias="0.654" />
 
-    <ImageButton
-        android:id="@+id/imagetabla1"
-        android:layout_width="153dp"
-        android:layout_height="157dp"
-        android:layout_marginTop="212dp"
-        android:src="@android:mipmap/sym_def_app_icon"
-        app:layout_constraintEnd_toStartOf="@+id/imagetabla2"
-        app:layout_constraintHorizontal_bias="0.68"
+    <ImageView
+        android:id="@+id/imageinferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="560dp"
+        android:src="@drawable/top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/texttabla1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="187dp"
-        android:fontFamily="@font/fredoka_one"
-        android:text="Tabla 1"
-        android:textColor="#03A9F4"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/textlatabla2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imagesuperior" />
-
-    <TextView
-        android:id="@+id/textlatabla2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:fontFamily="@font/fredoka_one"
-        android:text="Tabla 2"
-        android:textColor="#03A9F4"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.755"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/texttabla3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:fontFamily="@font/fredoka_one"
-        android:text="Tabla 3"
-        android:textColor="#03A9F4"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/imagetabla3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox1"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="CheckBox"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
-        app:layout_constraintHorizontal_bias="0.322"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagetabla1" />
 
     <ImageView
         android:id="@+id/imagesuperior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/top"
+        app:layout_constraintBottom_toTopOf="@+id/imageinferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
