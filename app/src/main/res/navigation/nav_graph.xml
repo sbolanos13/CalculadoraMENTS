@@ -79,5 +79,9 @@
         <action
             android:id="@+id/action_fifthFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <argument
+            android:name="Arg5"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>
