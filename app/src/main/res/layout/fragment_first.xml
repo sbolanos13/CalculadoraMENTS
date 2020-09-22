@@ -57,7 +57,7 @@
         android:layout_marginBottom="28dp"
         android:backgroundTint="#03A9F4"
         android:fontFamily="@font/fredoka_one"
-        android:text="RESULTADO"
+        android:text="Comenzar"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

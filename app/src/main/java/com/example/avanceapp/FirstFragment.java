@@ -26,8 +26,10 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.botonresultado).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirstFragmentDirections.ActionFirstFragmentToSecondFragment actionFirst =FirstFragmentDirections.actionFirstFragmentToSecondFragment();
+
                 NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                        .navigate(actionFirst);
             }
         });
     }

@@ -14,6 +14,10 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <argument
+            android:name="Arg1"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -30,6 +34,10 @@
         <action
             android:id="@+id/action_SecondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
+        <argument
+            android:name="Arg2"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -42,6 +50,10 @@
         <action
             android:id="@+id/action_thirdFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <argument
+            android:name="Arg3"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
@@ -54,6 +66,10 @@
         <action
             android:id="@+id/action_fourthFragment_to_fifthFragment"
             app:destination="@id/fifthFragment" />
+        <argument
+            android:name="Arg4"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/fifthFragment"
