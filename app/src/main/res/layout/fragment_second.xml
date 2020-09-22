@@ -6,99 +6,135 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
-    <SeekBar
-        android:id="@+id/seekbarUCI"
-        android:layout_width="250dp"
+    <Spinner
+        android:id="@+id/spinnertestadia6"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:max="750"
-        android:progress="100"
-        app:layout_constraintBottom_toBottomOf="@+id/textmiembros"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/textUCI"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekbarsangre"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintTop_toBottomOf="@+id/texttestadia"
+        app:layout_constraintVertical_bias="0.736" />
 
-    <SeekBar
-        android:id="@+id/seekbarprobintub"
+    <Spinner
+        android:id="@+id/spinnertestadia5"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/textzona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnertestadia3"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <Spinner
+        android:id="@+id/spinnertestadia4"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:max="750"
-        android:progress="100"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerzona"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/textmiembros"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekbarmiembros"
-        app:layout_constraintVertical_bias="0.495" />
+        app:layout_constraintTop_toBottomOf="@+id/textUCI" />
+
+    <Spinner
+        android:id="@+id/spinnertestadia3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/textzona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textmiembros"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <Spinner
+        android:id="@+id/spinnertestadia2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/texttestadia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttoperacion" />
 
     <Spinner
         android:id="@+id/spinnertestadia"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="23dp"
         android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/spinnertestadia6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttestadia" />
+        app:layout_constraintTop_toBottomOf="@+id/texttestadia"
+        app:layout_constraintVertical_bias="0.254" />
 
     <TextView
         android:id="@+id/textmiembros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Miembros Equipo Quirúrgico"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@+id/texttestadia" />
 
     <TextView
         android:id="@+id/textUCI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginBottom="17dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Necesidad UCI Postoperatoria"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/seekbarUCI"
+        app:layout_constraintBottom_toTopOf="@+id/textmiembros"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttestadia"
+        app:layout_constraintVertical_bias="0.683" />
 
     <TextView
         android:id="@+id/textsangre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Pérdida de Sangre Anticipada"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnertestadia6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnertestadia" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnertestadia"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/texttestadia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Tiempo Estimado de Estadía"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttoperacion" />
+        app:layout_constraintTop_toBottomOf="@+id/texttoperacion"
+        app:layout_constraintVertical_bias="0.075" />
 
     <Button
         android:id="@+id/botonsig"
@@ -111,15 +147,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/buttonprevious" />
-
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/buttonprevious"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonprevious"
@@ -139,67 +166,28 @@
         android:text="Factores del Procedimiento"
         android:textColor="#2196F3"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textview_second"
+        app:layout_constraintBottom_toTopOf="@+id/botonsig"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
-
-    <ImageButton
-        android:id="@+id/botonhome"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="80dp"
-        android:src="@android:drawable/ic_menu_set_as"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/botonsig"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@+id/buttonprevious"
-        app:layout_constraintTop_toBottomOf="@+id/textview_second"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.009" />
 
     <TextView
         android:id="@+id/texttoperacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Tiempo de Operación"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textlatabla1" />
-
-    <SeekBar
-        android:id="@+id/seekbartoperacion"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:max="10"
-        android:progress="3"
-        app:layout_constraintBottom_toTopOf="@+id/seekbarsangre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttoperacion"
+        app:layout_constraintTop_toBottomOf="@+id/textlatabla1"
         app:layout_constraintVertical_bias="0.0" />
-
-    <SeekBar
-        android:id="@+id/seekbarsangre"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:max="750"
-        android:progress="100"
-        app:layout_constraintBottom_toTopOf="@+id/textview_second"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textsangre"
-        app:layout_constraintVertical_bias="0.36" />
 
     <Spinner
         android:id="@+id/spinnerzona"
@@ -209,23 +197,9 @@
         android:layout_marginTop="18dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textzona" />
-
-    <SeekBar
-        android:id="@+id/seekbarmiembros"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:max="10"
-        android:progress="3"
-        app:layout_constraintBottom_toTopOf="@+id/textprobintub"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekbarUCI"
-        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textprobintub"
@@ -238,8 +212,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textzona"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textmiembros"
+        app:layout_constraintVertical_bias="0.854" />
 
     <TextView
         android:id="@+id/textzona"
@@ -250,18 +226,23 @@
         android:fontFamily="@font/fredoka_one"
         android:text="Zona a Intervenir"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textmiembros" />
+        app:layout_constraintTop_toBottomOf="@+id/textmiembros"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textresparcial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
         android:text="Resultado Parcial 1"
-        app:layout_constraintBottom_toTopOf="@+id/botonsig"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/botonhome"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerzona" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/botonsig"
+        app:layout_constraintStart_toStartOf="@+id/buttonprevious"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerzona"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
