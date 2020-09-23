@@ -9,6 +9,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+
+import android.widget.TextView;
+
+import java.lang.reflect.Array;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -116,5 +123,15 @@ public class ThirdFragment extends Fragment {
                         .navigate(actionThirdToFourth);
             }
         });
+
+        String[] efectividad= {"No disponibilidad","<40% de efectividad","40-60% de efectividad","60-95% de efectividad","100% de efectividad"};
+        int[] valores = {1,2,3,4,5};
+        Spinner spinnerEfectividad = view.findViewById(R.id.spinnerefectividad);
+        ArrayAdapter<String> adapterEfectividad = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, efectividad);
+        spinnerEfectividad.setAdapter(adapterEfectividad);
+//        TextView
+//        spinnerEfectividad.setOnItemSelectedListener();
+
+
     }
 }
