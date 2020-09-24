@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/fredoka_one"
             android:text="Resultado Final"
+            android:textColor="#0E0000"
             android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

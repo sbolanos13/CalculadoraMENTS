@@ -10,33 +10,37 @@
         android:id="@+id/spinnersangre"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="@+id/textUCI"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texttestadia"
-        app:layout_constraintVertical_bias="0.736" />
+        app:layout_constraintVertical_bias="0.721" />
 
     <Spinner
         android:id="@+id/spinnerintubacion"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="@+id/textzona"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnermiembros"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintVertical_bias="0.65" />
 
     <Spinner
         android:id="@+id/spinneruci"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/textmiembros"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textUCI" />
 
@@ -44,78 +48,86 @@
         android:id="@+id/spinnermiembros"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="@+id/textzona"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textmiembros"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.093" />
 
     <Spinner
         android:id="@+id/spinnertoperacion"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/texttestadia"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttoperacion" />
+        app:layout_constraintTop_toBottomOf="@+id/texttoperacion"
+        app:layout_constraintVertical_bias="0.454" />
 
     <Spinner
         android:id="@+id/spinnertestadia"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/spinnersangre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texttestadia"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintVertical_bias="0.215" />
 
     <TextView
         android:id="@+id/textmiembros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Miembros Equipo Quirúrgico"
+        android:textColor="#090000"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttestadia" />
+        app:layout_constraintTop_toBottomOf="@+id/texttestadia"
+        app:layout_constraintVertical_bias="0.455" />
 
     <TextView
         android:id="@+id/textUCI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Necesidad UCI Postoperatoria"
+        android:textColor="#0E0000"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textmiembros"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texttestadia"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintVertical_bias="0.733" />
 
     <TextView
         android:id="@+id/textsangre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/fredoka_one"
-        android:text="Pérdida de Sangre Anticipada"
+        android:text="Pérdida de Sangre Aproximada"
+        android:textColor="#100000"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/spinnersangre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnertestadia"
         app:layout_constraintVertical_bias="0.0" />
@@ -124,24 +136,25 @@
         android:id="@+id/texttestadia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Tiempo Estimado de Estadía"
+        android:textColor="#0C0000"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texttoperacion"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <Button
         android:id="@+id/botonsig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
         android:text="SIGUIENTE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,8 +165,8 @@
         android:id="@+id/buttonprevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="20dp"
         android:text="ANTERIOR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -177,14 +190,15 @@
         android:id="@+id/texttoperacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Tiempo de Operación"
+        android:textColor="#050000"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textlatabla1"
         app:layout_constraintVertical_bias="0.0" />
@@ -193,11 +207,11 @@
         android:id="@+id/spinnerzona"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textzona" />
 
@@ -205,46 +219,48 @@
         android:id="@+id/textprobintub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:layout_marginBottom="44dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Probabilidad Intubación"
+        android:textColor="#130101"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textzona"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textmiembros"
-        app:layout_constraintVertical_bias="0.854" />
+        app:layout_constraintVertical_bias="0.925" />
 
     <TextView
         android:id="@+id/textzona"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Zona a Intervenir"
+        android:textColor="#130000"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonprevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textmiembros"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.033" />
 
     <TextView
         android:id="@+id/textresparcial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
         android:text="Resultado Parcial 1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerzona"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,10 +50,10 @@ public class SecondFragment extends Fragment {
 
         // Arrays con valores y strings
         int[] valores1 = {1,2,3,4,5};
-        String[] tiemposoperacion = {"< 30 mins","31-60 mins","61-120 mins","121-180 mins",">= 181 mins"};
+        String[] tiemposoperacion = {"< 30 mins","31-60 mins","61-120 mins","121-180 mins","> 181 mins"};
         String[] tiemposestadia = {"Salida ese mismo día","< 23 h","24-48 h","2-3 días","> 4 días"};
-        String[] probICUpost = {"Improbable","< 5%","5-10%","11-25%",">25%"};
-        String[] perdidasangre = {"< 100 cc","100-250 cc","250-500","500-750","> 751 cc"};
+        String[] probICUpost = {"Poco probable","< 5%","5-10%","11-25%",">25%"};
+        String[] perdidasangre = {"< 100 cc","100-250 cc","250-500 cc","500-750 cc","> 751 cc"};
         String[] miembrosequipo = {"1","2","3","4",">4"};
         String[] probintubacion = {"<= 1 %","1-5%","6-10%","11-25%","> 25%"};
         String[] zonaoperacion = {"Ninguna de estas opciones","MIS Pélvico abdominal (PA)","Cirugía abierta infraumbilical PA","Cirugía abierta supraumbilical PA","OHNS/Gastrointestinal Superior/Torácica"};

@@ -23,6 +23,7 @@ import java.lang.reflect.Array;
  * create an instance of this fragment.
  */
 public class ThirdFragment extends Fragment {
+
 //
 //    // TODO: Rename parameter arguments, choose names that match
 //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -91,7 +92,6 @@ public class ThirdFragment extends Fragment {
 //
 //    }
 
-
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -124,13 +124,41 @@ public class ThirdFragment extends Fragment {
             }
         });
 
-        String[] efectividad= {"No disponibilidad","<40% de efectividad","40-60% de efectividad","60-95% de efectividad","100% de efectividad"};
-        int[] valores = {1,2,3,4,5};
+
+
+        // Arrays con valores y strings
+        int[] valores2 = {1,2,3,4,5};
+        String[] efectividad = {"No disponibilidad","<40% de efectividad","40-60% de efectividad","60-95% de efectividad","100% de efectividad"};
+        String[] riesgo = {"Significativamente negativo/No aplicable","Inferior al manejo quirúrgico","Equivalente al manejo quirúrgico","Posiblemente mejor que manejo quirúrgico","Superior al manejo quirúrgico"};
+        String[] impacto2 = {"Significativamente negativo","Negativo","Moderadamente negativo","Mínimamente negativo","No hay impacto negativo"};
+        String[] dificultad2 = {"Significativamente negativo","Negativo","Moderadamente negativo","Mínimamente negativo","No hay impacto negativo"};
+        String[] impacto6 = {"Significativamente negativo","Negativo","Moderadamente negativo","Mínimamente negativo","No hay impacto negativo"};
+        String[] dificultad6 = {"Significativamente negativo","Negativo","Moderadamente negativo","Mínimamente negativo","No hay impacto negativo"};
+
+        // Spinners
         Spinner spinnerEfectividad = view.findViewById(R.id.spinnerefectividad);
-        ArrayAdapter<String> adapterEfectividad = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, efectividad);
+        Spinner  spinnerRiesgo= view.findViewById(R.id.spinnerriesgo);
+        Spinner spinnerImpacto2 = view.findViewById(R.id.spinnerimpacto2);
+        Spinner spinnerDificultad2 = view.findViewById(R.id.spinnerdificultad2);
+        Spinner spinnerImpacto6 = view.findViewById(R.id.spinnerimpacto6);
+        Spinner spinnerDificultad6 = view.findViewById(R.id.spinnerdificultad6);
+
+        // Relación spinner con array de strings
+        ArrayAdapter<String> adapterEfectividad = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,efectividad);
         spinnerEfectividad.setAdapter(adapterEfectividad);
-//        TextView
-//        spinnerEfectividad.setOnItemSelectedListener();
+        ArrayAdapter<String> adapterRiesgo = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,riesgo);
+        spinnerRiesgo.setAdapter(adapterRiesgo);
+        ArrayAdapter<String> adapterImpacto2 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,impacto2);
+        spinnerImpacto2.setAdapter(adapterImpacto2);
+        ArrayAdapter<String> adapterDificultad2 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,dificultad2);
+        spinnerDificultad2.setAdapter(adapterDificultad2);
+        ArrayAdapter<String> adapterImpacto6 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,impacto6);
+        spinnerImpacto6.setAdapter(adapterImpacto6);
+        ArrayAdapter<String> adapterDificultad6 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,dificultad6);
+        spinnerDificultad6.setAdapter(adapterDificultad6);
+
+
+
 
 
     }
