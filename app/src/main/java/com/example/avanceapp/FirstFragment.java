@@ -27,7 +27,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FirstFragmentDirections.ActionFirstFragmentToSecondFragment actionFirst =FirstFragmentDirections.actionFirstFragmentToSecondFragment();
-
+                actionFirst.setSuma();
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(actionFirst);
             }

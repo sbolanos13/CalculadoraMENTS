@@ -17,6 +17,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 public class SecondFragment extends Fragment {
     int counter1 = 0;
+    int[] suma = new int[7];
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -39,17 +40,9 @@ public class SecondFragment extends Fragment {
 
         });
 
-        view.findViewById(R.id.botonsig).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment();
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(actionSecondToThird);
-            }
-        });
 
         // Arrays con valores y strings
-        int[] valores1 = {1,2,3,4,5};
+        final int[] valores1 = {1,2,3,4,5};
         String[] tiemposoperacion = {"< 30 mins","31-60 mins","61-120 mins","121-180 mins","> 181 mins"};
         String[] tiemposestadia = {"Salida ese mismo día","< 23 h","24-48 h","2-3 días","> 4 días"};
         String[] probICUpost = {"Poco probable","< 5%","5-10%","11-25%",">25%"};
@@ -85,13 +78,88 @@ public class SecondFragment extends Fragment {
 
 
         final TextView resparcial1 = view.findViewById(R.id.textresparcial);
-        //view.findViewById(R.id.textresparcial).setOnClickListener(new View.OnClickListener() {
-        //    @Override
-            //    public void onClick(View v) {
-       //         counter1 = 1;
-       //         resparcial1.setText("Resultado parcial: "+counter1);
-                //}
-        //});
+        spinnertoperacion.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                suma[0]=valores1[position];
+                resparcial1.setText("suma"+suma[0]);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnertestadia.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                suma[1]=valores1[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnerprobICUpost.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                suma[2]=valores1[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnerperdidasangre.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                suma[3]=valores1[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnermiembros.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                suma[4]=valores1[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnerprobintubacion.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                suma[5]=valores1[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnerzona.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                suma[6]=valores1[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        view.findViewById(R.id.botonsig).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment();
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(actionSecondToThird);
+            }
+        });
+
 
 
         };

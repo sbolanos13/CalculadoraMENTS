@@ -9,6 +9,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -19,79 +20,11 @@ import java.lang.reflect.Array;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ThirdFragment#newInstance} factory method to
+ * Use the  factory method to
  * create an instance of this fragment.
  */
 public class ThirdFragment extends Fragment {
-
-//
-//    // TODO: Rename parameter arguments, choose names that match
-//    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//    private static final String ARG_PARAM1 = "param1";
-//    private static final String ARG_PARAM2 = "param2";
-//
-//    // TODO: Rename and change types of parameters
-//    private String mParam1;
-//    private String mParam2;
-//
-//    public ThirdFragment() {
-//        // Required empty public constructor
-//    }
-//
-//    /**
-//     * Use this factory method to create a new instance of
-//     * this fragment using the provided parameters.
-//     *
-//     * @param param1 Parameter 1.
-//     * @param param2 Parameter 2.
-//     * @return A new instance of fragment ThirdFragment.
-//     */
-//    // TODO: Rename and change types and number of parameters
-//    public static ThirdFragment newInstance(String param1, String param2) {
-//        ThirdFragment fragment = new ThirdFragment();
-//        Bundle args = new Bundle();
-//        args.putString(ARG_PARAM1, param1);
-//        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
-//
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        if (getArguments() != null) {
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
-//        }
-//    }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_third, container, false);
-//
-//        view.findViewById(R.id.buttonprevious).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                SecondFragmentDirections.ActionSecondFragmentToFirstFragment actionSecondToFirst = SecondFragmentDirections.actionSecondFragmentToFirstFragment();
-//                NavHostFragment.findNavController(SecondFragment.this)
-//                        .navigate(actionSecondToFirst);
-//            }
-//        });
-//
-//        view.findViewById(R.id.botonsig).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment();
-//                NavHostFragment.findNavController(SecondFragment.this)
-//                        .navigate(actionSecondToThird);
-//            }
-//        });
-//
-//
-//    }
-
+    int[] suma = {};
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -110,6 +43,7 @@ public class ThirdFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ThirdFragmentDirections.ActionThirdFragmentToSecondFragment actionThirdToSecond = ThirdFragmentDirections.actionThirdFragmentToSecondFragment();
+                //actionThirdToSecond.setSuma(Suma2)
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(actionThirdToSecond);
             }
@@ -127,7 +61,7 @@ public class ThirdFragment extends Fragment {
 
 
         // Arrays con valores y strings
-        int[] valores2 = {1,2,3,4,5};
+        final int[] valores2 = {1,2,3,4,5};
         String[] efectividad = {"No disponibilidad","<40% de efectividad","40-60% de efectividad","60-95% de efectividad","100% de efectividad"};
         String[] riesgo = {"Significativamente negativo/No aplicable","Inferior al manejo quirúrgico","Equivalente al manejo quirúrgico","Posiblemente mejor que manejo quirúrgico","Superior al manejo quirúrgico"};
         String[] impacto2 = {"Significativamente negativo","Negativo","Moderadamente negativo","Mínimamente negativo","No hay impacto negativo"};
@@ -156,6 +90,27 @@ public class ThirdFragment extends Fragment {
         spinnerImpacto6.setAdapter(adapterImpacto6);
         ArrayAdapter<String> adapterDificultad6 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,dificultad6);
         spinnerDificultad6.setAdapter(adapterDificultad6);
+
+        // Funcion del boton seleccionado suma
+        final TextView sumaFragmento= getActivity().findViewById(R.id.textresparcial2);
+
+
+        spinnerEfectividad.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                int valor=valores2[position];
+                //suma[0]=valor;
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
+
+        //sumaFragmento.setText("Suma "+ suma);
+
+
 
 
 
