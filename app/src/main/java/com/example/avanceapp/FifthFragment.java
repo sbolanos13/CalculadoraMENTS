@@ -74,6 +74,15 @@ public class FifthFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_fifth, container, false);
     }
 
+    //int ResultadoFinal = 0;
+    //int valorX = 0;
+    //for (i<21) {
+    //    valorX = sumaFinal(i);
+    //    ResultadoFinal = ResultadoFinal + valorX;
+    //}
+
+    //if (ResultadoFinal)
+
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

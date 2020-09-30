@@ -27,12 +27,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.botonresultado).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
-                FirstFragmentDirections.ActionFirstFragmentToSecondFragment actionFirst =FirstFragmentDirections.actionFirstFragmentToSecondFragment();
-=======
                 FirstFragmentDirections.ActionFirstFragmentToSecondFragment actionFirst =FirstFragmentDirections.actionFirstFragmentToSecondFragment(sumaVacia);
                 actionFirst.setSumaProcedimiento(sumaVacia);
->>>>>>> d2e8a47d617bc32e4b79d7903755b6e9102c10f5
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(actionFirst);
             }

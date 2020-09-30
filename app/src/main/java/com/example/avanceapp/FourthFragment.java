@@ -125,7 +125,7 @@ public class FourthFragment extends Fragment {
         view.findViewById(R.id.buttonresultado2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment(suma4);
+                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment(sumaPaciente);
 
                 NavHostFragment.findNavController(FourthFragment.this)
                         .navigate(actionFourthToFifth);
