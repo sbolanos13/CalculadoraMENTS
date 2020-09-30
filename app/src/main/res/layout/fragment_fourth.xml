@@ -8,13 +8,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Spinner
-        android:id="@+id/spinner11"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="156dp" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -36,7 +29,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/botonprevious3" />
+            app:layout_constraintStart_toEndOf="@+id/botonprevious3"
+            app:layout_constraintTop_toBottomOf="@+id/textresparcial3"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Spinner
             android:id="@+id/spinnersintinfluenza"
@@ -44,10 +39,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/botonprevious3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textsintinfluenza" />
+            app:layout_constraintTop_toBottomOf="@+id/textsintinfluenza"
+            app:layout_constraintVertical_bias="0.006" />
 
         <Spinner
             android:id="@+id/spinnerapneasueno"
@@ -55,10 +52,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textapneasueno" />
+            app:layout_constraintTop_toBottomOf="@+id/textapneasueno"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Spinner
             android:id="@+id/spinnerinmuno"
@@ -66,10 +65,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textinmuno" />
+            app:layout_constraintTop_toBottomOf="@+id/textinmuno"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Spinner
             android:id="@+id/spinnerdiabetes"
@@ -77,10 +78,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textdiabetes" />
+            app:layout_constraintTop_toBottomOf="@+id/textdiabetes"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Spinner
             android:id="@+id/spinnerenfcardiov"
@@ -88,10 +91,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textenfcardiov" />
+            app:layout_constraintTop_toBottomOf="@+id/textenfcardiov"
+            app:layout_constraintVertical_bias="0.102" />
 
         <Spinner
             android:id="@+id/spinnercovid"
@@ -110,27 +115,33 @@
             android:id="@+id/textcovid"
             android:layout_width="372dp"
             android:layout_height="51dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Exposición conocida a COVID-19 positivos en ultimos 14 días"
             android:textColor="#0E0000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/botonprevious3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.256"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnersintinfluenza" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnersintinfluenza"
+            app:layout_constraintVertical_bias="0.011" />
 
         <TextView
             android:id="@+id/textsintinfluenza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Síntomas característicos Influenza"
             android:textColor="#0E0000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/botonprevious3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.087"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerinmuno" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerinmuno"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textview_second3"
@@ -145,11 +156,15 @@
             android:id="@+id/botonprevious3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="84dp"
             android:layout_marginBottom="20dp"
             android:text="ANTERIOR"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/textresparcial3"
+            app:layout_constraintHorizontal_bias="0.011"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerinmuno"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textlatabla3"
@@ -171,16 +186,16 @@
             android:id="@+id/textedad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="28dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Edad"
             android:textColor="#0C0000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.027"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textlatabla3" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.143" />
 
         <TextView
             android:id="@+id/textenfpulmonar"
@@ -192,72 +207,87 @@
             android:text="Enfermedades Pulmonares"
             android:textColor="#100000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinneredad" />
+            app:layout_constraintTop_toBottomOf="@+id/spinneredad"
+            app:layout_constraintVertical_bias="0.009" />
 
         <TextView
             android:id="@+id/textapneasueno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Apnea del sueño Obstructiva"
             android:textColor="#090000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerenfpulmonar" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerenfpulmonar"
+            app:layout_constraintVertical_bias="0.014" />
 
         <TextView
             android:id="@+id/textenfcardiov"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Enfermedad Cardiovascular"
             android:textColor="#0E0000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerapneasueno" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerapneasueno"
+            app:layout_constraintVertical_bias="0.056" />
 
         <TextView
             android:id="@+id/textdiabetes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Diabetes"
             android:textColor="#0B0000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textview_second3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.029"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerenfcardiov" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerenfcardiov"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textinmuno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/fredoka_one"
             android:text="Inmunocomprometido"
             android:textColor="#0B0000"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerdiabetes" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerdiabetes"
+            app:layout_constraintVertical_bias="0.009" />
 
         <TextView
             android:id="@+id/textresparcial3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
             android:layout_marginBottom="100dp"
             android:text="Resultado Parcial 3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textcovid"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -267,10 +297,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textenfpulmonar" />
+            app:layout_constraintTop_toBottomOf="@+id/textenfpulmonar"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Spinner
             android:id="@+id/spinneredad"
@@ -278,10 +310,12 @@
             android:layout_height="24dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_second3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textedad" />
+            app:layout_constraintTop_toBottomOf="@+id/textedad"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

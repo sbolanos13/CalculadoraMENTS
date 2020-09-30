@@ -20,8 +20,10 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.fragment.NavHostFragment;
 
 public class SecondFragment extends Fragment {
-    int counter1 = 0;
-//    int[] suma = new int[7];
+
+    int[] sumaProcedimiento = new int[7];
+
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -33,12 +35,15 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final int[] sumaProcedimiento = FirstFragmentArgs.fromBundle(getArguments()).getSumaVacia();
+        final TextView resparcial1 = view.findViewById(R.id.textresparcial);
+
+        //final int[] sumaProcedimiento = FirstFragmentArgs.fromBundle(getArguments()).getSumaVacia();
+
 
         view.findViewById(R.id.buttonprevious).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SecondFragmentDirections.ActionSecondFragmentToFirstFragment actionSecondToFirst = SecondFragmentDirections.actionSecondFragmentToFirstFragment(sumaProcedimiento);
+                SecondFragmentDirections.ActionSecondFragmentToFirstFragment actionSecondToFirst = SecondFragmentDirections.actionSecondFragmentToFirstFragment();
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(actionSecondToFirst);
             }
@@ -82,12 +87,25 @@ public class SecondFragment extends Fragment {
         spinnerzona.setAdapter(zonaoperacionAdapter);
 
 
-        final TextView resparcial1 = view.findViewById(R.id.textresparcial);
         spinnertoperacion.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sumaProcedimiento[0]=valores1[position];
                 //resparcial1.setText("suma"+sumaProcedimiento[0]);
+
+
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+                resparcial1.setText("Resultado Procedimiento "+total);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -98,6 +116,19 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sumaProcedimiento[1]=valores1[position];
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+                resparcial1.setText("Resultado Procedimiento "+total);
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -108,6 +139,19 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sumaProcedimiento[2]=valores1[position];
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+                resparcial1.setText("Resultado Procedimiento "+total);
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -118,6 +162,19 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sumaProcedimiento[3]=valores1[position];
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+                resparcial1.setText("Resultado Procedimiento "+total);
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -128,6 +185,19 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sumaProcedimiento[4]=valores1[position];
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+                resparcial1.setText("Resultado Procedimiento "+total);
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -138,6 +208,19 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sumaProcedimiento[5]=valores1[position];
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+                resparcial1.setText("Resultado Procedimiento "+total);
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -148,6 +231,20 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sumaProcedimiento[6]=valores1[position];
+                //
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+
+                resparcial1.setText("Resultado Procedimiento "+total);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -156,11 +253,24 @@ public class SecondFragment extends Fragment {
         });
 
 
+
         view.findViewById(R.id.botonsig).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment(sumaProcedimiento);
-                actionSecondToThird.setSumaEnfermedad(sumaProcedimiento);
+                //
+                //Suma del procedimiento
+                //
+                int i; /* contador */
+                int total = 0;
+
+                /* suma el contenido del arreglo sumaProcedimiento */
+                for ( i = 0; i < 7; i++ )
+                {
+                    total += sumaProcedimiento[ i ];
+                }
+                // Total es el resultado de la suma del procedimiento
+                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment();
+                actionSecondToThird.setSumaEnfermedad(total);
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(actionSecondToThird);
             }

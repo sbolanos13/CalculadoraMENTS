@@ -23,7 +23,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -34,10 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_second2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textefectividad" />
+        app:layout_constraintTop_toBottomOf="@+id/textefectividad"
+        app:layout_constraintVertical_bias="0.015" />
 
     <Spinner
         android:id="@+id/spinnerimpacto6"
@@ -45,10 +47,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonprevious2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textimpacto6" />
+        app:layout_constraintTop_toBottomOf="@+id/textimpacto6"
+        app:layout_constraintVertical_bias="0.02" />
 
     <Spinner
         android:id="@+id/spinnerdificultad2"
@@ -56,10 +60,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonprevious2"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textdificultadretraso2" />
+        app:layout_constraintTop_toBottomOf="@+id/textdificultadretraso2"
+        app:layout_constraintVertical_bias="0.003" />
 
     <Spinner
         android:id="@+id/spinnerimpacto2"
@@ -67,10 +73,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textimpacto2" />
+        app:layout_constraintTop_toBottomOf="@+id/textimpacto2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spinnerriesgo"
@@ -78,62 +86,75 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_second2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textriesgo" />
+        app:layout_constraintTop_toBottomOf="@+id/textriesgo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textdificultadretraso6"
         android:layout_width="391dp"
         android:layout_height="51dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Dificultad/Riesgo intervención por Retraso (6 semanas)"
         android:textColor="#130101"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerimpacto6" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerimpacto6"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textimpacto6"
         android:layout_width="392dp"
         android:layout_height="54dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Enfermedad por Retraso (6 semanas)"
         android:textColor="#100101"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonsig2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerdificultad2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerdificultad2"
+        app:layout_constraintVertical_bias="0.01" />
 
     <TextView
         android:id="@+id/textdificultadretraso2"
         android:layout_width="388dp"
         android:layout_height="58dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Dificultad/Riesgo intervención por Retraso (2 semanas)  "
         android:textColor="#0C0000"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonprevious2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerimpacto2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerimpacto2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textimpacto2"
         android:layout_width="359dp"
         android:layout_height="56dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Impacto en Enfermedad por Retraso (2 semanas) "
         android:textColor="#100101"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerriesgo" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerriesgo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textriesgo"
@@ -145,35 +166,41 @@
         android:text="Opción Tratamiento NO Operatorio (Riesgo Exposición)"
         android:textColor="#000000"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_second2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerefectividad" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerefectividad"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/botonsig2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="84dp"
         android:layout_marginBottom="20dp"
         android:text="SIGUIENTE"
         android:textColor="#100000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonprevious" />
+        app:layout_constraintStart_toEndOf="@+id/buttonprevious"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerdificultad2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/botonprevious2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="84dp"
         android:layout_marginBottom="20dp"
         android:text="ANTERIOR"
         android:textColor="#100101"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/botonsig2"
-        app:layout_constraintHorizontal_bias="0.016"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerimpacto2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textlatabla2"
@@ -194,16 +221,16 @@
         android:id="@+id/textefectividad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="24dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Efectividad del manejo No quirúrgico"
         android:textColor="#000000"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_second2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textlatabla2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
 
     <Spinner
         android:id="@+id/spinnerdificultad6"
@@ -211,10 +238,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonprevious2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textdificultadretraso6" />
+        app:layout_constraintTop_toBottomOf="@+id/textdificultadretraso6"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textresparcial2"
@@ -225,6 +254,8 @@
         android:text="Resultado Parcial 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/botonprevious2"
         app:layout_constraintTop_toBottomOf="@+id/textdificultadretraso6"
         app:layout_constraintVertical_bias="1.0" />
 

@@ -16,7 +16,8 @@
             app:destination="@id/SecondFragment" />
         <argument
             android:name="SumaVacia"
-            app:argType="integer[]" />
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -32,7 +33,8 @@
             app:destination="@id/thirdFragment" />
         <argument
             android:name="SumaProcedimiento"
-            app:argType="integer[]" />
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -47,7 +49,8 @@
             app:destination="@id/fourthFragment" />
         <argument
             android:name="sumaEnfermedad"
-            app:argType="integer[]" />
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
@@ -62,7 +65,8 @@
             app:destination="@id/fifthFragment" />
         <argument
             android:name="SumaPaciente"
-            app:argType="integer[]" />
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/fifthFragment"
@@ -74,6 +78,7 @@
             app:destination="@id/FirstFragment" />
         <argument
             android:name="Arg5"
-            app:argType="integer[]" />
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>
