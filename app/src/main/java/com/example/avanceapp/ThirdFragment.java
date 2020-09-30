@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ import java.lang.reflect.Array;
  * create an instance of this fragment.
  */
 public class ThirdFragment extends Fragment {
-    int[] suma = {};
+//    int[] suma = new int[6];
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -38,25 +39,17 @@ public class ThirdFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final int[] sumaEnfermedad = SecondFragmentArgs.fromBundle(getArguments()).getSumaProcedimiento();
 
         view.findViewById(R.id.botonprevious2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ThirdFragmentDirections.ActionThirdFragmentToSecondFragment actionThirdToSecond = ThirdFragmentDirections.actionThirdFragmentToSecondFragment();
-                //actionThirdToSecond.setSuma(Suma2)
+                ThirdFragmentDirections.ActionThirdFragmentToSecondFragment actionThirdToSecond = ThirdFragmentDirections.actionThirdFragmentToSecondFragment(sumaEnfermedad);
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(actionThirdToSecond);
             }
         });
 
-        view.findViewById(R.id.botonsig2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ThirdFragmentDirections.ActionThirdFragmentToFourthFragment actionThirdToFourth = ThirdFragmentDirections.actionThirdFragmentToFourthFragment();
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(actionThirdToFourth);
-            }
-        });
 
 
 
@@ -91,27 +84,77 @@ public class ThirdFragment extends Fragment {
         ArrayAdapter<String> adapterDificultad6 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,dificultad6);
         spinnerDificultad6.setAdapter(adapterDificultad6);
 
+        spinnerEfectividad.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaEnfermedad[7]=valores2[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerRiesgo.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaEnfermedad[8]=valores2[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerImpacto2.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaEnfermedad[9]=valores2[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerDificultad2.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaEnfermedad[10]=valores2[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerImpacto6.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaEnfermedad[11]=valores2[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerDificultad6.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaEnfermedad[12]=valores2[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+
+
         // Funcion del boton seleccionado suma
         final TextView sumaFragmento= getActivity().findViewById(R.id.textresparcial2);
 
 
-        spinnerEfectividad.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                int valor=valores2[position];
-                //suma[0]=valor;
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
 
+        view.findViewById(R.id.botonsig2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ThirdFragmentDirections.ActionThirdFragmentToFourthFragment2 actionThirdToFourth = ThirdFragmentDirections.actionThirdFragmentToFourthFragment2(sumaEnfermedad);
+                actionThirdToFourth.setSumaPaciente(sumaEnfermedad);
+                NavHostFragment.findNavController(ThirdFragment.this)
+                        .navigate(actionThirdToFourth);
             }
-
         });
-
-        //sumaFragmento.setText("Suma "+ suma);
-
-
-
 
 
 

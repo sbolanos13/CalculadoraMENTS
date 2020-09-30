@@ -18,6 +18,7 @@ import android.widget.Spinner;
  * create an instance of this fragment.
  */
 public class FourthFragment extends Fragment {
+    int[] suma4 = new int[8];
 
     @Override
     public View onCreateView(
@@ -36,7 +37,7 @@ public class FourthFragment extends Fragment {
         view.findViewById(R.id.botonprevious3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FourthFragmentDirections.ActionFourthFragmentToThirdFragment actionFourthToThird = FourthFragmentDirections.actionFourthFragmentToThirdFragment();
+                FourthFragmentDirections.ActionFourthFragmentToThirdFragment actionFourthToThird = FourthFragmentDirections.actionFourthFragmentToThirdFragment(suma4);
                 NavHostFragment.findNavController(FourthFragment.this)
                         .navigate(actionFourthToThird);
             }
@@ -45,7 +46,8 @@ public class FourthFragment extends Fragment {
         view.findViewById(R.id.buttonresultado2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment();
+                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment(suma4);
+
                 NavHostFragment.findNavController(FourthFragment.this)
                         .navigate(actionFourthToFifth);
             }
