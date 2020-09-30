@@ -10,9 +10,10 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 public class FirstFragment extends Fragment {
-
+    int[] sumaVacia = new int[21];
     @Override
     public View onCreateView(
+
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
@@ -26,8 +27,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.botonresultado).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirstFragmentDirections.ActionFirstFragmentToSecondFragment actionFirst =FirstFragmentDirections.actionFirstFragmentToSecondFragment();
-                actionFirst.setSuma();
+                FirstFragmentDirections.ActionFirstFragmentToSecondFragment actionFirst =FirstFragmentDirections.actionFirstFragmentToSecondFragment(sumaVacia);
+                actionFirst.setSumaProcedimiento(sumaVacia);
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(actionFirst);
             }

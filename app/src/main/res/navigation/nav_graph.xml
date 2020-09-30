@@ -15,9 +15,8 @@
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
         <argument
-            android:name="Arg1"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:name="SumaVacia"
+            app:argType="integer[]" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -32,11 +31,7 @@
             android:id="@+id/action_SecondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
         <argument
-            android:name="Arg2"
-            app:argType="integer"
-            android:defaultValue="0" />
-        <argument
-            android:name="suma"
+            android:name="SumaProcedimiento"
             app:argType="integer[]" />
     </fragment>
     <fragment
@@ -47,13 +42,12 @@
         <action
             android:id="@+id/action_thirdFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
-        <argument
-            android:name="Arg3"
-            android:defaultValue="0"
-            app:argType="integer" />
         <action
             android:id="@+id/action_thirdFragment_to_fourthFragment2"
             app:destination="@id/fourthFragment" />
+        <argument
+            android:name="sumaEnfermedad"
+            app:argType="integer[]" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
@@ -67,9 +61,8 @@
             android:id="@+id/action_fourthFragment_to_fifthFragment"
             app:destination="@id/fifthFragment" />
         <argument
-            android:name="Arg4"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:name="SumaPaciente"
+            app:argType="integer[]" />
     </fragment>
     <fragment
         android:id="@+id/fifthFragment"
@@ -81,7 +74,6 @@
             app:destination="@id/FirstFragment" />
         <argument
             android:name="Arg5"
-            app:argType="integer"
-            android:defaultValue="0" />
+            app:argType="integer[]" />
     </fragment>
 </navigation>

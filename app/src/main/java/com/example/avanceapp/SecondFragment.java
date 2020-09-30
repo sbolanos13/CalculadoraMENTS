@@ -1,6 +1,7 @@
 package com.example.avanceapp;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,13 +12,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.fragment.NavHostFragment;
 
 public class SecondFragment extends Fragment {
     int counter1 = 0;
-    int[] suma = new int[7];
+//    int[] suma = new int[7];
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -29,11 +33,12 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final int[] sumaProcedimiento = FirstFragmentArgs.fromBundle(getArguments()).getSumaVacia();
 
         view.findViewById(R.id.buttonprevious).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SecondFragmentDirections.ActionSecondFragmentToFirstFragment actionSecondToFirst = SecondFragmentDirections.actionSecondFragmentToFirstFragment();
+                SecondFragmentDirections.ActionSecondFragmentToFirstFragment actionSecondToFirst = SecondFragmentDirections.actionSecondFragmentToFirstFragment(sumaProcedimiento);
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(actionSecondToFirst);
             }
@@ -81,8 +86,8 @@ public class SecondFragment extends Fragment {
         spinnertoperacion.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                suma[0]=valores1[position];
-                resparcial1.setText("suma"+suma[0]);
+                sumaProcedimiento[0]=valores1[position];
+                //resparcial1.setText("suma"+sumaProcedimiento[0]);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -92,7 +97,7 @@ public class SecondFragment extends Fragment {
         spinnertestadia.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                suma[1]=valores1[position];
+                sumaProcedimiento[1]=valores1[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -102,7 +107,7 @@ public class SecondFragment extends Fragment {
         spinnerprobICUpost.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                suma[2]=valores1[position];
+                sumaProcedimiento[2]=valores1[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -112,7 +117,7 @@ public class SecondFragment extends Fragment {
         spinnerperdidasangre.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                suma[3]=valores1[position];
+                sumaProcedimiento[3]=valores1[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -122,7 +127,7 @@ public class SecondFragment extends Fragment {
         spinnermiembros.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                suma[4]=valores1[position];
+                sumaProcedimiento[4]=valores1[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -132,7 +137,7 @@ public class SecondFragment extends Fragment {
         spinnerprobintubacion.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                suma[5]=valores1[position];
+                sumaProcedimiento[5]=valores1[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -142,7 +147,7 @@ public class SecondFragment extends Fragment {
         spinnerzona.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                suma[6]=valores1[position];
+                sumaProcedimiento[6]=valores1[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -154,13 +159,14 @@ public class SecondFragment extends Fragment {
         view.findViewById(R.id.botonsig).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment();
+                SecondFragmentDirections.ActionSecondFragmentToThirdFragment actionSecondToThird = SecondFragmentDirections.actionSecondFragmentToThirdFragment(sumaProcedimiento);
+                actionSecondToThird.setSumaEnfermedad(sumaProcedimiento);
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(actionSecondToThird);
             }
         });
 
 
-
         };
+
     }
