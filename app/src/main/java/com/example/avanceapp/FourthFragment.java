@@ -15,7 +15,7 @@ import android.widget.Spinner;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FourthFragment#newInstance} factory method to
+ * Use the {@link FourthFragment#} factory method to
  * create an instance of this fragment.
  */
 public class FourthFragment extends Fragment {
@@ -120,16 +120,54 @@ public class FourthFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+        spinnerDiabetes.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaPaciente[17]=valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerInmuno.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaPaciente[18]=valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerInfluenza.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaPaciente[19]=valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerCovid.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaPaciente[20]=valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
 
 
         view.findViewById(R.id.buttonresultado2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment(suma4);
-
+                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment(sumaPaciente);
+                actionFourthToFifth.setArg5(sumaPaciente);
                 NavHostFragment.findNavController(FourthFragment.this)
                         .navigate(actionFourthToFifth);
             }
         });
+
     }
 }
