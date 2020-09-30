@@ -25,7 +25,11 @@ import java.lang.reflect.Array;
  * create an instance of this fragment.
  */
 public class ThirdFragment extends Fragment {
-//    int[] suma = new int[6];
+
+    int[] sumaEnfermedad = new int[6];
+
+
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -39,12 +43,13 @@ public class ThirdFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final int[] sumaEnfermedad = SecondFragmentArgs.fromBundle(getArguments()).getSumaProcedimiento();
+        final TextView resparcial2 = view.findViewById(R.id.textresparcial2);
+        final int sumaProcedimiento = ThirdFragmentArgs.fromBundle(getArguments()).getSumaEnfermedad();
 
         view.findViewById(R.id.botonprevious2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ThirdFragmentDirections.ActionThirdFragmentToSecondFragment actionThirdToSecond = ThirdFragmentDirections.actionThirdFragmentToSecondFragment(sumaEnfermedad);
+                ThirdFragmentDirections.ActionThirdFragmentToSecondFragment actionThirdToSecond = ThirdFragmentDirections.actionThirdFragmentToSecondFragment();
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(actionThirdToSecond);
             }
@@ -87,7 +92,21 @@ public class ThirdFragment extends Fragment {
         spinnerEfectividad.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sumaEnfermedad[7]=valores2[position];
+//                sumaEnfermedad[7]=valores2[position];
+                sumaEnfermedad[0]=valores2[position];
+
+                //Suma de la enfermedad
+                //
+                int i; /* contador */
+                int totalEnfermedad = 0;
+
+                /* suma el contenido del arreglo sumaEnfermedad */
+                for ( i = 0; i < 6; i++ )
+                {
+                    totalEnfermedad += sumaEnfermedad[ i ];
+                }
+                // Total es el resultado de la suma de la enfermedad
+                resparcial2.setText("Resultado Enfermedad "+ totalEnfermedad);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -96,7 +115,21 @@ public class ThirdFragment extends Fragment {
         spinnerRiesgo.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sumaEnfermedad[8]=valores2[position];
+//                sumaEnfermedad[8]=valores2[position];
+                sumaEnfermedad[1]=valores2[position];
+
+                //Suma de la enfermedad
+                //
+                int i; /* contador */
+                int totalEnfermedad = 0;
+
+                /* suma el contenido del arreglo sumaEnfermedad */
+                for ( i = 0; i < 6; i++ )
+                {
+                    totalEnfermedad += sumaEnfermedad[ i ];
+                }
+                // Total es el resultado de la suma de la enfermedad
+                resparcial2.setText("Resultado Enfermedad "+ totalEnfermedad);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -105,7 +138,21 @@ public class ThirdFragment extends Fragment {
         spinnerImpacto2.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sumaEnfermedad[9]=valores2[position];
+//                sumaEnfermedad[9]=valores2[position];
+                sumaEnfermedad[2]=valores2[position];
+
+                //Suma de la enfermedad
+                //
+                int i; /* contador */
+                int totalEnfermedad = 0;
+
+                /* suma el contenido del arreglo sumaEnfermedad */
+                for ( i = 0; i < 6; i++ )
+                {
+                    totalEnfermedad += sumaEnfermedad[ i ];
+                }
+                // Total es el resultado de la suma de la enfermedad
+                resparcial2.setText("Resultado Enfermedad "+ totalEnfermedad);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -114,7 +161,21 @@ public class ThirdFragment extends Fragment {
         spinnerDificultad2.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sumaEnfermedad[10]=valores2[position];
+//                sumaEnfermedad[10]=valores2[position];
+                sumaEnfermedad[3]=valores2[position];
+
+                //Suma de la enfermedad
+                //
+                int i; /* contador */
+                int totalEnfermedad = 0;
+
+                /* suma el contenido del arreglo sumaEnfermedad */
+                for ( i = 0; i < 6; i++ )
+                {
+                    totalEnfermedad += sumaEnfermedad[ i ];
+                }
+                // Total es el resultado de la suma de la enfermedad
+                resparcial2.setText("Resultado Enfermedad "+ totalEnfermedad);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -123,7 +184,21 @@ public class ThirdFragment extends Fragment {
         spinnerImpacto6.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sumaEnfermedad[11]=valores2[position];
+//                sumaEnfermedad[11]=valores2[position];
+                sumaEnfermedad[4]=valores2[position];
+
+                //Suma de la enfermedad
+                //
+                int i; /* contador */
+                int totalEnfermedad = 0;
+
+                /* suma el contenido del arreglo sumaEnfermedad */
+                for ( i = 0; i < 6; i++ )
+                {
+                    totalEnfermedad += sumaEnfermedad[ i ];
+                }
+                // Total es el resultado de la suma de la enfermedad
+                resparcial2.setText("Resultado Enfermedad "+ totalEnfermedad);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -132,7 +207,21 @@ public class ThirdFragment extends Fragment {
         spinnerDificultad6.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sumaEnfermedad[12]=valores2[position];
+//                sumaEnfermedad[12]=valores2[position];
+                sumaEnfermedad[5]=valores2[position];
+
+                //Suma de la enfermedad
+                //
+                int i; /* contador */
+                int totalEnfermedad = 0;
+
+                /* suma el contenido del arreglo sumaEnfermedad */
+                for ( i = 0; i < 6; i++ )
+                {
+                    totalEnfermedad += sumaEnfermedad[ i ];
+                }
+                // Total es el resultado de la suma de la enfermedad
+                resparcial2.setText("Resultado Enfermedad "+ totalEnfermedad);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -142,15 +231,28 @@ public class ThirdFragment extends Fragment {
 
 
         // Funcion del boton seleccionado suma
-        final TextView sumaFragmento= getActivity().findViewById(R.id.textresparcial2);
+//        final TextView sumaFragmento= getActivity().findViewById(R.id.textresparcial2);
 
 
 
         view.findViewById(R.id.botonsig2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ThirdFragmentDirections.ActionThirdFragmentToFourthFragment2 actionThirdToFourth = ThirdFragmentDirections.actionThirdFragmentToFourthFragment2(sumaEnfermedad);
-                actionThirdToFourth.setSumaPaciente(sumaEnfermedad);
+                //Suma de la enfermedad
+                //
+                int i; /* contador */
+                int totalEnfermedad = 0;
+
+                /* suma el contenido del arreglo sumaEnfermedad */
+                for ( i = 0; i < 6; i++ )
+                {
+                    totalEnfermedad += sumaEnfermedad[ i ];
+                }
+                // Total es el resultado de la suma de la enfermedad
+                int sumaProcEnf = sumaProcedimiento + totalEnfermedad;
+
+                ThirdFragmentDirections.ActionThirdFragmentToFourthFragment2 actionThirdToFourth = ThirdFragmentDirections.actionThirdFragmentToFourthFragment2();
+                actionThirdToFourth.setSumaPaciente(sumaProcEnf);
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(actionThirdToFourth);
             }
