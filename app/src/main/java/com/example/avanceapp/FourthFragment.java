@@ -9,6 +9,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -18,7 +19,7 @@ import android.widget.Spinner;
  * create an instance of this fragment.
  */
 public class FourthFragment extends Fragment {
-    int[] suma4 = new int[8];
+//    int[] suma4 = new int[8];
 
     @Override
     public View onCreateView(
@@ -33,30 +34,21 @@ public class FourthFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final int[] sumaPaciente = ThirdFragmentArgs.fromBundle(getArguments()).getSumaEnfermedad();
 
         view.findViewById(R.id.botonprevious3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FourthFragmentDirections.ActionFourthFragmentToThirdFragment actionFourthToThird = FourthFragmentDirections.actionFourthFragmentToThirdFragment(suma4);
+                FourthFragmentDirections.ActionFourthFragmentToThirdFragment actionFourthToThird = FourthFragmentDirections.actionFourthFragmentToThirdFragment(sumaPaciente);
                 NavHostFragment.findNavController(FourthFragment.this)
                         .navigate(actionFourthToThird);
-            }
-        });
-
-        view.findViewById(R.id.buttonresultado2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment(suma4);
-
-                NavHostFragment.findNavController(FourthFragment.this)
-                        .navigate(actionFourthToFifth);
             }
         });
 
 
 
         // Arrays con valores y strings
-        int[] valores2 = {1,2,3,4,5};
+        final int[] valores = {1,2,3,4,5};
         String[] edad = {"< 20 años","21-40 años","41-50 años","51-65 años","> 65 años"};
         String[]  pulmonar = {"No presenta","No aplica","No aplica","Uso mínimo de inhaladores","Uso frecuente de inhaladores"};
         String[] apnea = {"No presenta","No aplica","No aplica", "Leve a moderada, sin uso de CPAP","Uso de CPAP"};
@@ -92,5 +84,52 @@ public class FourthFragment extends Fragment {
         ArrayAdapter<String> adapterCovid = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item,covid);
         spinnerCovid.setAdapter(adapterCovid);
 
+        spinnerEdad.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaPaciente[13] = valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerPulmonar.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+               sumaPaciente[14]=valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerApneaSueno.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaPaciente[15]=valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        spinnerEnfCardio.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sumaPaciente[16]=valores[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+
+        view.findViewById(R.id.buttonresultado2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FourthFragmentDirections.ActionFourthFragmentToFifthFragment actionFourthToFifth = FourthFragmentDirections.actionFourthFragmentToFifthFragment(suma4);
+
+                NavHostFragment.findNavController(FourthFragment.this)
+                        .navigate(actionFourthToFifth);
+            }
+        });
     }
 }
