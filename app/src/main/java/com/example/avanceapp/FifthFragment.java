@@ -33,6 +33,7 @@ public class FifthFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         final int[] sumaFinal = FourthFragmentArgs.fromBundle(getArguments()).getSumaPaciente();
 
+        //
 
 
 
